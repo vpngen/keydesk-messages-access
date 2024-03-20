@@ -15,7 +15,7 @@ vendor: "VPNGen"
 homepage: "http://vpngen.org"
 
 contents:
-- src: /data/src/jwt-pub-msg.pem
+- src: jwt-pub-msg.pem
   dst: /etc/
   file_info:
     mode: 0644
