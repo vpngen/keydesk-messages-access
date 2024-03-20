@@ -1,0 +1,29 @@
+name: "vgkeydesk-messages-access"
+arch: "all"
+platform: "linux"
+version: ${PACKAGE_VERSION}
+section: "default"
+priority: "optional"
+release: ${PACKAGE_RELEASE}
+
+provides:
+- vgkeydesk-messages-access
+
+maintainer: "Ingmund Ollson <ingmund@proton.me>"
+description: VPNGen keydesk snap access grants
+vendor: "VPNGen"
+homepage: "http://vpngen.org"
+
+contents:
+- src: /data/src/jwt-pub-msg.pem
+  dst: /etc/
+  file_info:
+    mode: 0644
+    owner: root
+    group: root
+deb:
+  compression: xz
+  breaks:
+  - vgkeydesk-all (<< 1.0.0)
+  - vgkeydesk (<< 1.0.0) 
+
